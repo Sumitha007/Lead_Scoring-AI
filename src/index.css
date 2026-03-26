@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 12%;
+
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 94%;
+    --secondary-foreground: 220 30% 20%;
+
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 220 14% 94%;
+    --accent-foreground: 220 30% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 217 91% 50%;
+
+    --radius: 0.625rem;
+
+    /* SmartLead custom tokens */
+    --lead-hot: 142 71% 45%;
+    --lead-hot-foreground: 0 0% 100%;
+    --lead-warm: 32 95% 55%;
+    --lead-warm-foreground: 0 0% 100%;
+    --lead-cold: 217 91% 60%;
+    --lead-cold-foreground: 0 0% 100%;
+    --lead-drop: 0 72% 51%;
+    --lead-drop-foreground: 0 0% 100%;
+
+    --sidebar-background: 220 30% 12%;
+    --sidebar-foreground: 220 14% 80%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 30% 18%;
+    --sidebar-accent-foreground: 220 14% 90%;
+    --sidebar-border: 220 30% 20%;
+    --sidebar-ring: 217 91% 60%;
+    --sidebar-muted: 220 14% 40%;
+
+    --chart-1: 217 91% 50%;
+    --chart-2: 142 71% 45%;
+    --chart-3: 32 95% 55%;
+    --chart-4: 0 72% 51%;
+
+    --shadow-card: 0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px -1px rgba(0,0,0,0.06);
+    --shadow-card-hover: 0 4px 12px 0 rgba(0,0,0,0.08);
+  }
+
+  .dark {
+    --background: 220 30% 6%;
+    --foreground: 220 14% 90%;
+    --card: 220 30% 10%;
+    --card-foreground: 220 14% 90%;
+    --popover: 220 30% 10%;
+    --popover-foreground: 220 14% 90%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 30% 16%;
+    --secondary-foreground: 220 14% 90%;
+    --muted: 220 30% 16%;
+    --muted-foreground: 220 14% 50%;
+    --accent: 220 30% 16%;
+    --accent-foreground: 220 14% 90%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 217 91% 60%;
+    --sidebar-background: 220 30% 6%;
+    --sidebar-foreground: 220 14% 70%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 30% 12%;
+    --sidebar-accent-foreground: 220 14% 90%;
+    --sidebar-border: 220 30% 14%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
